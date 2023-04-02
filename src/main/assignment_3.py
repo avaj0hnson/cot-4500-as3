@@ -16,7 +16,7 @@ def eulerMethod(t0, tn, i, y0):
         y.append(y_next)
         t.append(t_next)
     
-    print(y[-1])
+    print("%.5f" % y[-1])
 
 # QUESTION 2
 def rungeKutta(t0, tn, i, y0):
@@ -35,7 +35,7 @@ def rungeKutta(t0, tn, i, y0):
         y.append(y_next)
         t.append(t_next)
     
-    print(y[-1])
+    print("%.5f" % y[-1])
 
 # QUESTION 3
 def gaussian(A):
@@ -72,7 +72,7 @@ def LU(A):
             L[j, i] = (A[j, i] - np.dot(L[j, :i], U[:i, i])) / U[i, i]
 
     det = np.prod(np.diag(U))-0.00000000000001
-    print(det)
+    print("%.5f" % det)
     print()
     print(L)
     print()
